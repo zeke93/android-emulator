@@ -18,7 +18,7 @@ all:
 	@docker images
 
 run: clean
-	@docker run -e "EMULATOR=$(EMULATOR)" -e "ARCH=$(ARCH)" -d -P --name android --log-driver=json-file tracer0tong/android-emulator
+	@docker run -e "EMULATOR=$(EMULATOR)" -e "ARCH=$(ARCH)" -d -P -p 8899:8899 --name android --log-driver=json-file tracer0tong/android-emulator
 
 ports:
 ifneq "$(RUNNED)" ""

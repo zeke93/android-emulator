@@ -14,6 +14,7 @@ EXPOSE 5037
 EXPOSE 5554
 EXPOSE 5555
 EXPOSE 5900
+EXPOSE 8899
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN echo "debconf shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections && \
